@@ -4,16 +4,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { BodyComponent } from './body/body.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainComponent } from './main/main.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent,
-    SidebarComponent
+    MainComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule
