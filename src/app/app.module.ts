@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
+import { weatherRouting } from './weather.routing';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    weatherRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
