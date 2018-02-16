@@ -1,0 +1,10 @@
+.input-group{
+	padding: 20px;
+	text-align: center;
+}
+.main-city{
+	background: #f9f9f9;
+	border: 1px solid rgba(0,1,1,0.5);
+	text-align: center;
+	padding: 20px;
+}

@@ -1,6 +1,16 @@
 <div class="container">
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+				<div class="input-group">
+					<input type="text" class="form-control" ngModel name="city" placeholder="Name of a city">
+				</div>
+			</form>
+		</div>
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4 main-city">
 			<h1>{{myWeather.cityName}}</h1>
 			<h2>{{myWeather.temp}}&deg;</h2>
 			<div class="img">
@@ -10,6 +20,8 @@
 			<h4>Max: {{myWeather.tempMax}}&deg;</h4>
 			<h4>Min: {{myWeather.tempMin}}&deg;</h4>
 		</div>
+		<div class="col-sm-4"></div>
+		<div class="col-sm-3">col-sm</div>
 		<div class="col-sm-3">col-sm</div>
 		<div class="col-sm-3">col-sm</div>
 		<div class="col-sm-3">col-sm</div>
