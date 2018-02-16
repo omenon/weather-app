@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
 import { weatherRouting } from './weather.routing';
 import { WeatherService } from './weather.service';
+import { ResolveLocationService } from './resolve-location.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { WeatherService } from './weather.service';
     BrowserModule,HttpClientModule, FormsModule, HttpModule,
     weatherRouting
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, ResolveLocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

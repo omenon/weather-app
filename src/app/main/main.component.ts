@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import 'rxjs/Rx';
 
 import { WeatherService } from '../weather.service';
 import { CurrentWeather } from '../current-weather';
@@ -10,26 +12,14 @@ import { CurrentWeather } from '../current-weather';
 })
 export class MainComponent implements OnInit {
 	myWeather:CurrentWeather;
-	location
-  constructor(private ws:WeatherService) { }
+  constructor(private ws:WeatherService, private route:ActivatedRoute) { }
 
   ngOnInit() {
-  this.myWeather = this.ws.weatherNow();
-  navigator.geolocation.getCurrentPosition((pos) =>{
-  	this.location = pos.coords;
-  	const lat = this.location.latitude;
-  	const lon = this.location.longitude;
-  	this.ws.localWeather(lat, lon).subscribe(
-  	(date) => {
-  		console.log(date);
-  		this.myWeather = new CurrentWeather(date.name,
-  			date.main.temp,
-  			date.weather[0].icon,
-  			date.weather[0].description,
-  			date.main.temp_max,
-  			date.main.temp_min)
-  	})
-  })
+  	this.route.data.subscribe(
+  		(data:{myWeather:CurrentWeather}) => {
+  			this.myWeather = data.myWeather; 
+  		}
+  	)
   }
 
 }
