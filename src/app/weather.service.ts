@@ -7,6 +7,7 @@ import { CurrentWeather } from './current-weather';
 @Injectable()
 export class WeatherService {
 	myWeather:CurrentWeather;
+	Weather:CurrentWeather;
 	location
 	constructor(private http:Http) { }
 
@@ -33,6 +34,10 @@ export class WeatherService {
 	}
 
 	anotherCityWeather(city:string){
+		return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a2aebbb66f776d3385d1e83159d803ca&units=metric`).map((response:Response) => response.json());
+	}
+
+	anotherCityWeather2(city:string){
 		return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a2aebbb66f776d3385d1e83159d803ca&units=metric`).map((response:Response) => response.json());
 	}
 

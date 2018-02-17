@@ -1,6 +1,5 @@
 <div class="container">
 	<div class="row">
-		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 			<form (ngSubmit)="onSubmit(form)" #form="ngForm">
 				<div class="input-group">
@@ -21,9 +20,49 @@
 			<h4>Min: {{myWeather.tempMin}}&deg;</h4>
 		</div>
 		<div class="col-sm-4"></div>
-		<div class="col-sm-3">col-sm</div>
-		<div class="col-sm-3">col-sm</div>
-		<div class="col-sm-3">col-sm</div>
-		<div class="col-sm-3">col-sm</div>
+		<div class="col-sm-4 another-city">		
+		<table  class="table table-striped table-bordered" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>
+						<!-- <a href="#" (click)="sortType('cityName')"[class.active]="sortBy === 'cityName'"> -->
+						City name
+						<!-- </a> -->
+					</th>
+					<th>
+						Temp
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{Weather.cityName}}</td>
+					<td>{{Weather.temp}}&deg;</td>
+				</tr>
+				<tr>
+					<td>{{Weather2.cityName}}</td>
+					<td>{{Weather2.temp}}&deg;</td>
+				</tr>
+				<tr>
+					<td>{{Weather3.cityName}}</td>
+					<td>{{Weather3.temp}}&deg;</td>
+				</tr>
+				<tr>
+					<td>{{Weather4.cityName}}</td>
+					<td>{{Weather4.temp}}&deg;</td>
+				</tr>
+				<tr>
+					<td>{{Weather5.cityName}}</td>
+					<td>{{Weather5.temp}}&deg;</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
 	</div>
 </div>
+
+
+
+
+
+
