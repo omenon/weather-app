@@ -46,8 +46,8 @@ export class MainComponent implements OnInit {
    			date.main.temp_max,
    			date.main.temp_min)
    	})
+   	var city = 'Berlin';
 		 this.Weather3 = this.ws.anotherCityWeather2();
-   	var city = 'Kiev';
    	this.ws.anotherCityWeather2(city).subscribe((date) => { console.log(date);
    		this.Weather3 = new CurrentWeather(date.name,
    			date.main.temp,
@@ -57,7 +57,7 @@ export class MainComponent implements OnInit {
    			date.main.temp_min)
    	})
 		 this.Weather4 = this.ws.anotherCityWeather2();
-   	var city = 'Berlin';
+   	var city = 'Kiev';
    	this.ws.anotherCityWeather2(city).subscribe((date) => { console.log(date);
    		this.Weather4 = new CurrentWeather(date.name,
    			date.main.temp,
@@ -102,3 +102,4 @@ export class MainComponent implements OnInit {
 			)
 	}
 }
+

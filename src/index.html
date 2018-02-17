@@ -9,8 +9,29 @@
   <link rel="icon" type="image/x-icon" href="http://pluspng.com/img-png/png-hot-sun-with-1000.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
+<body id="place">
   <wa-root>Loading...</wa-root>
   
 </body>
+<script type="text/javascript">
+    var phr = new Array();
+    phr.push("http://mirpozitiva.ru/uploads/posts/2016-10/1477469601_nature_gora.jpg");
+    phr.push("https://i.ytimg.com/vi/4ku-cwVo58Y/maxresdefault.jpg");
+    phr.push("http://www.kartinki24.ru/uploads/gallery/main/374/kartinki24_ru_autumn_128.jpg");
+    phr.push("http://gif-kartinki.ru/1/krasivaja-priroda.jpg");
+    phr.push("http://www.bestwall.com.ua/data/media/3/priroda_bwua_24.06.2012_015__1920x1080.jpg");
+
+function Rotator_cont() {
+var s = 5000;
+var N=phr.length;
+var i=Math.round(Math.random()*(N));Rotator(i);
+
+function Rotator(i){
+i++; if(i>N-1){i=0};
+document.getElementById('place').style.backgroundImage='url('+phr[i]+')';
+timerId01=setTimeout(function(){Rotator(i)},s);return;}
+}Rotator_cont()
+
+</script>
+
 </html>
